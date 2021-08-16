@@ -1,11 +1,8 @@
-version: 2.1
-jobs:
-  build:
-    docker:
-      - image: alpine:3.7
-    steps:
-      - checkout
-      - run:
-          name: Trying to get this to work
-          command: |
-            npm run test
+version: '2.1'
+orbs:
+  node: circleci/node@x.y
+workflows:
+  run-npm-command:
+    jobs:
+      - node/run:
+          npm-run: build
