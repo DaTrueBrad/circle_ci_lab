@@ -1,7 +1,17 @@
 version: 2.1
 jobs:
-  Testing:
+  build:
+    docker:
+      - image: alpine:3.7
     steps:
+      - checkout
       - run:
-        name: Running Test File
-        command: npm run test
+          name: The First Step
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
+      - run:
+          name: Code Has Arrived
+          command: |
+            ls -al
+            echo '^^^That should look familiar^^^'
