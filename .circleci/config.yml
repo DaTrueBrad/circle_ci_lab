@@ -6,12 +6,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: The First Step
+          name: Trying to get this to work
           command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-      - run:
-          name: Code Has Arrived
-          command: |
-            ls -al
-            echo '^^^That should look familiar^^^'
+            npm run test
