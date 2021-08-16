@@ -1,0 +1,7 @@
+version: 2.1
+jobs:
+  Testing:
+    steps:
+      - run:
+        name: Running Test File
+        command: npm run test
